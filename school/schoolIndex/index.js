@@ -52,7 +52,7 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.shousuolist();
     },
     dingwei:function(){
         let that = this
@@ -88,8 +88,8 @@ Page({
         // console.log(2222)
         var e = this;
         if(!e.data.longitude || !e.data.latitude) return t.toast('请先获取定位')
-        // if(!e.data.keyword || e.data.keyword == "") return t.toast('请输入学校名称') 
-        // console.log(e.data.keyword)
+        if(!e.data.keyword || e.data.keyword == "") return t.toast('请输入驾校名称') 
+        console.log(e.data.keyword)
         t.post("school/list", {
             lng: e.data.longitude,
             lat: e.data.latitude,
@@ -104,11 +104,19 @@ Page({
             // };
             // t.list || (t.list = []), t.list.length > 0 && (a.page = e.data.page + 1, a.list = e.data.list.concat(t.list), 
             // t.list.length < t.pagesize && (a.loaded = !0)), e.setData(a);
-
-             e.setData({
-                list: t.list,
-                keyword: "",
-            })
+            if(!t.total || t.total == 0){
+                e.setData({
+                    list: t.list,
+                    total: 0,
+                    loading: !1,
+                })
+            }else{
+                e.setData({
+                    list: t.list,
+                   
+                })
+            }
+             
 
         });
     },
@@ -116,7 +124,7 @@ Page({
         // console.log(2222)
         var e = this;
         if(!e.data.longitude || !e.data.latitude) return t.toast('请先获取定位')
-        // if(!e.data.keyword || e.data.keyword == "") return t.toast('请输入学校名称') 
+        // if(!e.data.keyword || e.data.keyword == "") return t.toast('请输入驾校名称') 
         // console.log(e.data.keyword)
         t.post("school/list", {
             lng: e.data.longitude,

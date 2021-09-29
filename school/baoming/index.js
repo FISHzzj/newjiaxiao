@@ -34,16 +34,20 @@ Page({
  
     t.post("school/info", {
         id: e.data.id
-    }, function(t) {
-        console.log(t)
-         e.setData({
-            logo: t.logo,
-            merchname: t.merchname,
-            price: t.price,
-            west_info: t.west_info,
-            east_info: t.east_info,
-            guide_img: t.guide_img
-        })
+    }, function(o) {
+        console.log(o)
+        if(o.error == -1){
+          t.toast(o.message)
+        }else{
+            e.setData({
+                logo: o.logo,
+                merchname: o.merchname,
+                guide_img: o.guide_img,
+                west_info: o.west_info,
+                east_info: o.east_info
+            })
+        }
+         
 
     });
   },

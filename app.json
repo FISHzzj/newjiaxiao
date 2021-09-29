@@ -175,7 +175,9 @@
     "school/myCollect/index",
     "school/zixundetail/index",
     "school/pay/index",
-    "school/baoming/index"
+    "school/baoming/index",
+    "school/about/index",
+    "school/fankui/index"
   ],
   "debug": false,
   "permission": {
@@ -197,7 +199,7 @@
       },
       {
         "pagePath": "school/schoolIndex/index",
-        "text": "学校",
+        "text": "驾校",
         "iconPath": "static/images/tabbar/icon-2.png",
         "selectedIconPath": "static/images/tabbar/icon-2-active.png"
       },

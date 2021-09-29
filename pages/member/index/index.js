@@ -60,6 +60,16 @@ Page({
             })
         });
     },
+    goabout(){
+        wx.navigateTo({
+          url: '/school/about/index',
+        })
+    },
+    gofankui(){
+        wx.navigateTo({
+            url: '/school/fankui/index',
+          })
+    },
     closekefu(){
         this.setData({
             // mobile: t.mobile,

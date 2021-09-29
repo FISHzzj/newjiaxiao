@@ -1,0 +1,3 @@
+<!--school/about/index.wxml-->
+
+<rich-text class="fankui" nodes="{{content}}"></rich-text>

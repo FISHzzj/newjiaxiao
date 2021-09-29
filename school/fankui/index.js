@@ -15,19 +15,7 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        let id = options.id
-        let type = options.type
-        if(type == 'xuesheng'){
-            this.setData({
-                id: id,
-                type: "xuesheng"
-            })
-        }else {
-            this.setData({
-                id: id,
-                // type: xuesheng
-            })
-        }
+        
        
     },
 
@@ -58,12 +46,14 @@ Page({
     },
     tijiao(){
         var e = this;
-        if(e.data.type == 'xuesheng'){
+        // if(e.data.type == 'xuesheng'){
             if(this.data.title == '') return t.toast('请输入标题');
             if(this.data.content == '') return t.toast('请输入内容');
-            t.post("school/getsel/comment", {
-                id: e.data.id,
-                content: e.data.content
+            t.post("user/feedback", {
+                // id: e.data.id,
+                content: e.data.content,
+                image:"http://193.112.106.104/attachment/images/1/2021/04/mvw6AM7BKWQqmz4Q6VM3NV4bMP44mW.png",
+                
             }, function(o) {
                 console.log(o)
                 if(o.error == 0){
@@ -79,25 +69,7 @@ Page({
                     t.toast(t.message)
                 }
             });
-        }else{
-            if(this.data.title == '') return t.toast('请输入标题');
-            if(this.data.content == '') return t.toast('请输入内容');
-            t.post("shop/notice/comment", {
-                nid: e.data.id,
-                content: e.data.content
-            }, function(o) {
-                console.log(o)
-                if(o.error == 0){
-                    t.toast('提交成功')
-                    e.setData({
-                        title: '',
-                        content: ''
-                    })
-                }else {
-                    t.toast(t.message)
-                }
-            });
-        }
+        // }
       
         
      

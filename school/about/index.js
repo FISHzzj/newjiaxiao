@@ -15,20 +15,25 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad: function (options) {
-        let id = options.id
-        let type = options.type
-        if(type == 'xuesheng'){
-            this.setData({
-                id: id,
-                type: "xuesheng"
-            })
-        }else {
-            this.setData({
-                id: id,
-                // type: xuesheng
-            })
-        }
+        this.getdata();
        
+    },
+    getdata(){
+        var e = this;
+        // if(!e.data.longitude || !e.data.latitude) return t.toast('请先获取定位')
+    
+        t.get("user/feedback/look", {}, function(o) {
+            console.log(o)
+            if(o.error == -1){
+                t.toast(o.message)
+            }else{
+                e.setData({
+                    content:o.info
+                })
+            }
+            
+
+        });
     },
 
     /**

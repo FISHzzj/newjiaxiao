@@ -1,0 +1,6 @@
+/* school/about/index.wxss */
+page{
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #ffffff;
+}

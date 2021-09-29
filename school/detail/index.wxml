@@ -10,14 +10,23 @@
   <image class="logo" src="{{logo}}"></image>
   <view class="name">{{merchname}}</view>
 </view>
+<view class="swiper">
+  <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <swiper-item wx:for="{{banner_img}}" class="item" wx:key="{{index}}">
+          <navigator>
+              <image class="pic" src="{{item}}"></image>
+          </navigator>
+      </swiper-item>
+  </swiper>
+</view>
 <view class="nav flex ali_center flex_around">
-  <view class="item {{active == 0?'on':''}}" data-active="0" bindtap="changeNav">东区</view>
-  <view class="item {{active == 1?'on':''}}" data-active="1" bindtap="changeNav">西区</view>
+  <view class="item {{active == 0?'on':''}}" data-active="0" bindtap="changeNav">科二</view>
+  <view class="item {{active == 1?'on':''}}" data-active="1" bindtap="changeNav">科三</view>
   <view class="item {{active == 2?'on':''}}" data-active="2" bindtap="changeNav">教务人员</view>
   <view class="item {{active == 3?'on':''}}" data-active="3" bindtap="changeNav">学生评论</view>
 </view>
 <view class="eastArea" wx:if="{{active == 0}}">
-  <view class="title">东区</view>
+  <view class="title">科目二</view>
   <scroll-view class="list" scroll-x="true">
     <view class="item" >
       <!-- <image class="img" src="/static/images/\carve/coupon-share.png"></image> -->
@@ -27,13 +36,13 @@
   <view class="title">校车接送时间: {{east_info.east_time}}</view>
   <!-- <view class="time">2021-20-20 14:14:14 - 2021-20-20 14:14:14</view> -->
   <view class="imgs">
-    <view class="item" wx:for="{{east_info.east_thumbs}}" wx:key="{{index}}">
+    <view class="item" wx:for="{{east_info.east_thumbs}}" wx:key="{{index}}" bindtap="fangda" data-url="{{item}}">
       <image mode="widthFix" class="img" src="{{item}}"></image>
     </view>
   </view>
 </view>
 <view class="eastArea" wx:if="{{active == 1}}">
-  <view class="title">西区</view>
+  <view class="title">科目三</view>
   <scroll-view class="list" scroll-x="true">
     <view class="item">
       <video class="img" src="{{west_info.west_vedio}}"></video>
@@ -42,7 +51,7 @@
   <view class="title">校车接送时间:{{east_info.east_time}}</view>
   <!-- <view class="time">2021-20-20 14:14:14 - 2021-20-20 14:14:14</view> -->
   <view class="imgs">
-    <view class="item" wx:for="{{west_info.west_thumbs}}" wx:key="{{index}}">
+    <view class="item" wx:for="{{west_info.west_thumbs}}" wx:key="{{index}}" bindtap="fangda" data-url="{{item}}">
       <image mode="widthFix" class="img" src="{{item}}"></image>
     </view>
   </view>
@@ -87,3 +96,7 @@
 </view>
 <view style="height:130rpx"></view>
 <view  class="submit" bindtap="baoming">立即报名</view>
+<!-- 放大 -->
+<view class="fangda" wx:if="{{urlshow}}" bindtap="suoxiao">
+  <image src="{{itemurl}}"></image>
+</view>
