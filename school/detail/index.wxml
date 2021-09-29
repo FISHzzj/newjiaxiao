@@ -11,8 +11,8 @@
   <view class="name">{{merchname}}</view>
 </view>
 <view class="nav flex ali_center flex_around">
-  <view class="item {{active == 0?'on':''}}" data-active="0" bindtap="changeNav">东区</view>
-  <view class="item {{active == 1?'on':''}}" data-active="1" bindtap="changeNav">西区</view>
+  <view class="item {{active == 0?'on':''}}" data-active="0" bindtap="changeNav">科二</view>
+  <view class="item {{active == 1?'on':''}}" data-active="1" bindtap="changeNav">科三</view>
   <view class="item {{active == 2?'on':''}}" data-active="2" bindtap="changeNav">教务人员</view>
   <view class="item {{active == 3?'on':''}}" data-active="3" bindtap="changeNav">学生评论</view>
 </view>

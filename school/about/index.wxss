@@ -1,0 +1,4 @@
+/* school/about/index.wxss */
+.fankui{
+  padding: 20rpx 20rpx;
+}

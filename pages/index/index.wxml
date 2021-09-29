@@ -18,7 +18,7 @@
         <navigator  hoverClass="none" url="/school/reply/index?id={{item.id}}"  class="bottom flex1 ali_center">
             <!-- <image src="{{item.thumb}}" class="avatar" ></image> -->
             <view class="nickname">咨讯新闻</view>
-            <text class="plnum">评论{{item.comment_total}}</text>
+            <!-- <text class="plnum">评论{{item.comment_total}}</text> -->
             <!-- <text class="time">1小时前</text> -->
         </navigator>
     </view>
@@ -34,7 +34,7 @@
         <view class="bottom flex1 ali_center">
             <!-- <image  src="{{item.thumb}}" class="avatar"></image> -->
             <view class="nickname">标题</view>
-            <text class="plnum">评论{{item.comment_total}}</text>
+            <!-- <text class="plnum">评论{{item.comment_total}}</text> -->
             <!-- <text class="time">1小时前</text> -->
         </view>
     </view>

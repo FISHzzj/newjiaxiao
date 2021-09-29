@@ -7,7 +7,7 @@
  * @FilePath: \windy_wxapp\school\mySchool\index.wxml
 -->
 <view class="list">
-    <view class="item" wx:for="{{list}}" :key="{{index}}">
+    <navigator open-type="navigate" class="item" wx:for="{{list}}" :key="{{index}}" url="/school/detail/index?id={{item.merchid}}">
         <view class="schoolInfo flex ali_center">
             <image class="logo" src="{{item.logo}}"></image>
             <view class="info">
@@ -17,7 +17,7 @@
                 <view class="name">{{item.createtime}}</view>
             </view>
         </view>
-    </view>
+    </navigator>
 </view>
 <view class="fui-loading" wx:if="{{loading}}">
     <view class="icon"></view>

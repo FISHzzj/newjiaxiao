@@ -14,7 +14,7 @@
   <view class="right flex ali_center">
     <image class="pic" src="/static/images/tabbar/icon-19.png" />
     <!-- <text class="a">搜索</text> -->
-    <input type="text" class="shousuo" placeholder="请输入学校名称" value="{{keyword}}" bindblur="shousuoblur" />
+    <input type="text" class="shousuo" placeholder="请输入驾校名称" value="{{keyword}}" bindinput="shousuoblur" />
   </view>
   <view bindtap="shousuo" class="shousuobtn">搜索</view>
 </view>

@@ -34,7 +34,9 @@ Page({
     },
     getshoucang(){
         var e = this;
-        t.get("user/collection", {}, function(t) {
+        t.post("user/collection", {
+            page: e.data.page,
+        }, function(t) {
             var a = {
                 loading: !1,
                 total: t.total,
@@ -45,7 +47,6 @@ Page({
             
         });
     },
-
     /**
      * 生命周期函数--监听页面隐藏
      */

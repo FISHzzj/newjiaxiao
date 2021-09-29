@@ -63,15 +63,19 @@ Page({
      
         t.post("school/info", {
             id: e.data.id
-        }, function(t) {
-            console.log(t)
-             e.setData({
-                logo: t.logo,
-                merchname: t.merchname,
-                price: t.price,
-                west_info: t.west_info,
-                east_info: t.east_info
-            })
+        }, function(o) {
+            console.log(o)
+            if(o.error == -1){
+                t.toast(o.message)
+            }else{
+                e.setData({
+                    logo: o.logo,
+                    merchname: o.merchname,
+                    west_info: o.west_info,
+                    east_info: o.east_info
+                })
+            }
+             
 
         });
     },
@@ -126,14 +130,14 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
+       
     },
 
     /**
      * 生命周期函数--监听页面显示
      */
     onShow: function () {
-
+        this.getData()
     },
 
     /**
