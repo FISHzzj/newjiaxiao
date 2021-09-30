@@ -133,7 +133,7 @@ scroll-view {
   background-color: #fff;
 }
 .pinglun{
-  position: absolute;
+  position: fixed;
   bottom: 200rpx;
   right: 40rpx;
 }
@@ -157,19 +157,17 @@ scroll-view {
   border-radius: 20rpx;
 }
 .fangda{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.4);
   width: 100%;
-  height: 160%;
+  height: 100%;
 }
 
 .fangda image{
   width: 750rpx;
-    height: 370rpx;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  height: 50%;
+  position: absolute;
+  top: 20%;
 }

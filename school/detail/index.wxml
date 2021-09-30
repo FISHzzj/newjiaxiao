@@ -6,18 +6,18 @@
  * @Description: In User Settings Edit
  * @FilePath: \windy_wxapp\school\detail\index.wxml
 -->
-<view class="top flex ali_center flex_center">
-  <image class="logo" src="{{logo}}"></image>
-  <view class="name">{{merchname}}</view>
-</view>
 <view class="swiper">
   <swiper class="banner" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <swiper-item wx:for="{{banner_img}}" class="item" wx:key="{{index}}">
+      <swiper-item wx:for="{{banner_img}}" class="item" wx:key="{{index}}" bindtap="fangda" data-url="{{item}}">
           <navigator>
               <image class="pic" src="{{item}}"></image>
           </navigator>
       </swiper-item>
   </swiper>
+</view>
+<view class="top flex ali_center flex_center">
+  <image class="logo" src="{{logo}}"></image>
+  <view class="name">{{merchname}}</view>
 </view>
 <view class="nav flex ali_center flex_around">
   <view class="item {{active == 0?'on':''}}" data-active="0" bindtap="changeNav">科二</view>
