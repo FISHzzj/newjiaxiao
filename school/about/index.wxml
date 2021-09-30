@@ -1,4 +1,3 @@
 <!--school/about/index.wxml-->
-<view class="fankui">
-  反馈内容
-</view>
+
+<rich-text class="fankui" nodes="{{content}}"></rich-text>

@@ -13,7 +13,7 @@
   </view>
   <view class="item flex">
       <view class="label">内容</view>
-      <textarea class="content" name="" placeholder="请输入评价内容" id="" cols="30" rows="10" bindblur="getcontent" value="{{content}}"></textarea>
+      <textarea class="content" name="" placeholder="请输入反馈内容" id="" cols="30" rows="10" bindblur="getcontent" value="{{content}}"></textarea>
   </view>
   <view class="submit" bindtap="tijiao">提交</view>
 </view>

@@ -20,6 +20,13 @@ Page({
         loaded: !1,
         loading: !0,
         list: [],
+        indicatorDots: true,
+        autoplay: !0,
+        interval: 5e3,
+        duration: 500,
+        banner_img: [],
+        urlshow:false,
+        itemurl:"",
     },
 
     /**
@@ -56,6 +63,18 @@ Page({
             this.getjiaowu()
         }
     },
+    fangda(e){
+        let url = e.currentTarget.dataset.url;
+        this.setData({
+            itemurl: url,
+            urlshow: true
+        })
+    },
+    suoxiao(){
+        this.setData({
+            urlshow: false
+        })
+    },
     getData: function(){
         // console.log(2222)
         var e = this;
@@ -72,7 +91,8 @@ Page({
                     logo: o.logo,
                     merchname: o.merchname,
                     west_info: o.west_info,
-                    east_info: o.east_info
+                    east_info: o.east_info,
+                    banner_img: o.banner_img
                 })
             }
              
