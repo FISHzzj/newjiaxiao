@@ -51,9 +51,12 @@
         </view>
         <image class="pic" src="/static/images/school/arrow.png"></image>
     </view>
-    <button class="btn btn-default btn-default-o pull-left" openType="contact" sessionFrom="weapp" showMessageCard="true" style="border: 0;background: #fff;    width: 95%;">
-        <text class="icox icox-customerservice"></text>客服    
-    </button>
+    <view class="item flex flex_between ali_center">
+        <button class="btn btn-default btn-default-o pull-left" openType="contact" sessionFrom="weapp" showMessageCard="true" style="border: 0;background: #fff;    width: 95%;    z-index: 0;">
+            <text class="icox icox-customerservice"></text>客服    
+        </button>
+    </view>
+    
     <!-- <navigator class="item flex flex_between ali_center" hoverClass="none" openType="switchTab" url="/pages/member/cart/index">
         <view class="left flex ali_center">
             <image class="pic" src="/static/images/school/login.png"></image>
